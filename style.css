@@ -14,9 +14,10 @@
 
 .todo-app {
     width: 100%;
-    max-width: 540px;
+    max-width: 500px;
+    height: 93vh;
     background-color: #ffff;
-    margin: 100px auto 20px;
+    margin: 10px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }

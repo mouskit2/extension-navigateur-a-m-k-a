@@ -1,6 +1,9 @@
 const inputBox = document.querySelector('#input-box');
 const listContainer = document.querySelector('.list-container');
 const textError = document.querySelector('.text-error');
+const buttonAdd = document.querySelector('.button-add')
+
+buttonAdd.addEventListener("click", addTask);
 
 function addTask() {
     if (inputBox.value === '') {
@@ -23,6 +26,10 @@ function addTask() {
     inputBox.value = "";
     saveData();
 };
+
+
+
+
 
 listContainer.addEventListener('click', function (e) {
     if (e.target.tagName === 'LI') {
