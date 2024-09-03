@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "To-Do ListS",
+  "version": "0.1",
+  "description": "Une simple extension de liste de tâches.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "sidePanel"],
+  "side_panel": {
+    "default_path": "index.html",
+    "default_icon": "images/icon.png",
+  "action": {
+    "default_title": "Click to open panel"
+  }
+  }
+}
+
