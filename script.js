@@ -4,8 +4,14 @@ const textError = document.querySelector('.text-error');
 const buttonAdd = document.querySelector('.button-add')
 
 buttonAdd.addEventListener("click", addTask);
+inputBox.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        addTask();
+    }
+})
 
 function addTask() {
+
     if (inputBox.value === '') {
         textError.innerText = 'You must write something!';
         // alert('You must write something!');
