@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* z-index: 2; */
+    background-color: yellow;
+    display: flex;
+    position: relative;
+}
+
+.filtre-noir {
+    position: absolute;
+    width: 200%;
+    height: 200vh;
+    background-color: black;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-50%);
+    mask-position: 2px 23px;
+    mask-origin: pointer;
+    mask-image: radial-gradient(circle, transparent 2%, black 5%);
+}
+
+a {
+    /* z-index: 3; */
+    position: relative;
+}
+
+/* .filtre-noir::before {
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -100px;
+    top: 50%;
+    mix-blend-mode: difference;
+    background: transparent;
+    z-index: 10;
+    border: 2px solid white;
+    height: 100px;
+    width: 100px;
+    transition: 0.1;
+} */
