@@ -1,7 +1,8 @@
 const inputBox = document.querySelector('#input-box');
 const listContainer = document.querySelector('.list-container');
 const textError = document.querySelector('.text-error');
-const buttonAdd = document.querySelector('.button-add')
+const buttonAdd = document.querySelector('.button-add');
+let taskCount;
 
 buttonAdd.addEventListener("click", addTask);
 inputBox.addEventListener('keydown', function (event) {
@@ -63,9 +64,12 @@ listContainer.addEventListener('click', function (e) {
 
 function saveData() {
     localStorage.setItem('data', listContainer.innerHTML);
+    localStorage.setItem('count', taskCount.toString());
 }
 
 function showTask() {
     listContainer.innerHTML = localStorage.getItem('data');
+    const localCount = localStorage.getItem('count')
+    taskCount = localCount ? parseInt(localCount) : 0;
 }
 showTask() 
