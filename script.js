@@ -33,7 +33,20 @@ function addTask() {
     saveData();
 };
 
+document.getElementById("darkenPage").addEventListener("click", ()=> {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) =>{
+        chrome.scripting.executeScript({ 
+            target: {
+                tabId: tabs[0].id},
+                function: makePageBlack
+        });
+        });
+        });
 
+
+function makePageBlack() {
+    document.body.style.backgroundColor = "black";
+}
 
 
 
