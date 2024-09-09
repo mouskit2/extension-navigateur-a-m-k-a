@@ -47,6 +47,17 @@ document.getElementById("darkenPage").addEventListener("click", () => {
 function makePageBlack() {
   document.body.style.backgroundColor = "black";
 }
+function taskEvent(){
+  console.log("taskEvent running");
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.scripting.executeScript({
+      target: {
+        tabId: tabs[0].id,
+      },
+      function: makePageBlack,
+    });
+  });
+}
 
 listContainer.addEventListener(
   "click",
@@ -64,6 +75,7 @@ listContainer.addEventListener(
       if (taskCount >= 5) {
         console.log("vous avez atteint la limite de 5 tâches.");
         taskCount = 0;
+        taskEvent();
       }
       console.log(taskCount);
 
