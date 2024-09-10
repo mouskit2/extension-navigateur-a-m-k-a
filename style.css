@@ -10,10 +10,12 @@
     min-height: 100vh;
     background: linear-gradient(150deg, #156062, #00c092);
     padding: 10px;
-    display:flex;
+    display: flex;
 }
 
 .todo-app {
+    z-index: 1;
+    position: relative;
     width: 100%;
     max-width: 500px;
     background-color: #00c092;
@@ -133,7 +135,7 @@ hr.dot {
     margin: 10px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
-    border: 2px solid pink;
+    display: none;
 }
 
 .eventDivTop {

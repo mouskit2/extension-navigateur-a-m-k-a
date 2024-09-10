@@ -14,6 +14,9 @@
   "action": {
     "default_title": "Click to open panel"
   }
+  },
+  "chrome_url_overrides" : {
+    "newtab" : "newtab.html"
   }
 }
 
