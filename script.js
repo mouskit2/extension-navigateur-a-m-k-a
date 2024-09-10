@@ -51,6 +51,8 @@ btnLeft.addEventListener("click", () => {
 
 function endEvent() { 
   todoApp.style.display = 'block';
+  eventTask.style.display = 'none';
+
 }
 
 btnRight.addEventListener("click", function (e) {
@@ -63,6 +65,8 @@ function makePageBlack() {
 function taskEvent(){
   console.log("taskEvent running");
   todoApp.style.display = 'none';
+  eventTask.style.display = 'block';
+
   } 
 
 function playGameEvent() { 

@@ -14,7 +14,6 @@
 }
 
 .todo-app {
-    z-index: 1;
     width: 100%;
     max-width: 500px;
     background-color: #00c092;
@@ -128,7 +127,6 @@ hr.dot {
 }
 
 .eventTask {
-    z-index: 10;
     width: 100%;
     max-width: 500px;
     background-color: #00c092;
