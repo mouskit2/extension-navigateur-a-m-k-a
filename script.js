@@ -2,6 +2,11 @@ const inputBox = document.querySelector("#input-box");
 const listContainer = document.querySelector(".list-container");
 const textError = document.querySelector(".text-error");
 const buttonAdd = document.querySelector(".button-add");
+const todoApp = document.querySelector('.todo-app');
+const btnRight = document.querySelector('.buttonRight');
+const btnLeft = document.querySelector('.buttonLeft');
+const container = document.querySelector('.container');
+const eventTask = document.querySelector('.eventTask');
 let taskCount;
 
 buttonAdd.addEventListener("click", addTask);
@@ -33,7 +38,7 @@ function addTask() {
   saveData();
 }
 
-document.getElementById("darkenPage").addEventListener("click", () => {
+btnLeft.addEventListener("click", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.scripting.executeScript({
       target: {
@@ -44,12 +49,24 @@ document.getElementById("darkenPage").addEventListener("click", () => {
   });
 });
 
+function endEvent() { 
+  todoApp.style.display = 'block';
+}
+
+btnRight.addEventListener("click", function (e) {
+  endEvent()
+});
+
 function makePageBlack() {
   document.body.style.backgroundColor = "black";
 }
 function taskEvent(){
   console.log("taskEvent running");
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  todoApp.style.display = 'none';
+  } 
+
+function playGameEvent() { 
+   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.scripting.executeScript({
       target: {
         tabId: tabs[0].id,
