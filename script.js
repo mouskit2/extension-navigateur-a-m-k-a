@@ -119,4 +119,16 @@ function showTask() {
   const localCount = localStorage.getItem("count");
   taskCount = localCount ? parseInt(localCount) : 0;
 }
+
+function updateDisplay() { 
+  showTask();
+}
+
+function refreshLoop() { 
+  updateDisplay()
+
+  setInterval(updateDisplay, 2000);
+}
+
 showTask();
+document.addEventListener('DOMContentLoaded', refreshLoop);
