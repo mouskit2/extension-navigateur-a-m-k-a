@@ -68,9 +68,9 @@ hr.solid {
 .todo-app h2 {
     color: #156062;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    margin-left: 3rem;
 }
 
 .todo-app h2 img {
@@ -173,7 +173,7 @@ hr.dot {
     width: 100%;
     max-width: 400px;
     background-color: #00c092;
-    padding: 40px 30px 70px;
+    /* padding: 40px 30px 70px; */
     display: none;
 }
 
@@ -190,9 +190,12 @@ hr.dot {
 .eventTask h2 {
     color: yellow;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 22%;
+    text-align: center;
+    margin-top: 2rem ;
+    /* margin-left: 22%; */
 }
 
 .eventDivBottom {
@@ -211,4 +214,8 @@ hr.dot {
     padding-bottom: 0.5rem;
     margin: 10px;
     /* text-transform: uppercase; */
+}
+
+.eventDivBottom .buttonLeft { 
+    display: none;
 }
