@@ -1,3 +1,7 @@
+:root {
+    --gradient-glow: linear-gradient(135deg, #e66465, #9198e5)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,31 +11,59 @@
 
 .container {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(150deg, #156062, #00c092);
-    padding: 10px;
+    /* padding: 10px; */
+    left: 0%;
     display: flex;
+    border: 2px solid pink;
+}
+
+h1 {
+    color: var(--text-color);
+    transition: color 0.3s;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    background: var(--gradient-glow);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px 0;
+}
+
+.trophee {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    /* padding-left: 30%; */
+    box-sizing: border-box;
+    text-transform: uppercase;
+    height: 100%;
+    width: auto;
+    flex-direction: column;
+}
+
+.motivation-meme {
+    max-width: 30rem;
+    height: auto;
 }
 
 .todo-app {
-    z-index: 1;
-        position: relative;
-        width: 100%;
-        max-width: 500px;
-        background-color: #00c092;
-        margin: 10px auto 20px;
-        padding: 40px 30px 70px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background-color: #00c092;
+    /* margin: 10px auto 20px; */
+    padding: 40px 30px 70px;
+    /* border-radius: 10px; */
 }
 
 .todo-app h2 {
     color: #156062;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    margin-left: 22%;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
 }
 
 .todo-app h2 img {
@@ -132,11 +164,9 @@ hr.dot {
 
 .eventTask {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     background-color: #00c092;
-    margin: 10px auto 20px;
     padding: 40px 30px 70px;
-    border-radius: 10px;
     display: none;
 }
 
