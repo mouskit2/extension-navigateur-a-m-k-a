@@ -3,6 +3,11 @@
   "name": "To-Do ListS",
   "version": "0.1",
   "description": "Une simple extension de liste de tâches.",
+  "icons": { 
+      "16": "images/icons/icon16.png",
+      "32": "images/icons/icon32.png",
+      "128": "images/icons/icon128.png"
+    },
   "background": {
     "service_worker": "background.js"
   },

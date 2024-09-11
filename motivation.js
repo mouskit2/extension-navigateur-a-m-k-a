@@ -28,7 +28,7 @@ function getRandomIndex(justdoit) {
     return Math.floor(Math.random() * justdoit.length);
 }
 
-const motivationMeme = document.querySelector('.motivation-meme')
+let motivationMeme = document.querySelector('.motivation-meme')
 motivationMeme.src = motivation[getRandomIndex(motivation)]
 
 
