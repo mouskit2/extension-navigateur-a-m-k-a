@@ -153,9 +153,9 @@ hr.dot {
 .eventTask h2 {
     color: yellow;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 22%;
 }
 
 .eventDivBottom {
