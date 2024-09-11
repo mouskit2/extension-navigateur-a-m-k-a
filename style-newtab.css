@@ -181,6 +181,8 @@ hr.dot {
     color: #156062;
     background-color: #eddef0;
     padding: 1rem 1.5rem 1rem 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
     border-radius: 20px;

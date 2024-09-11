@@ -115,11 +115,23 @@ function playGame() {
   // nFilter.style.display = "none";
   const div = document.querySelector('.gameDiv');
   div.remove();
-  }
+  } 
+  
+  let changeTop = getRandomCoordonate(150, 250).toString();
+  let changeLeft = getRandomCoordonate(160, 250).toString();
+
+  function getRandomCoordonate(min, max) {
+    return Math.ceil((Math.random() * (max - min) + min));
+  } 
+
+  console.log("left = " + changeLeft)
+  console.log("top = " + changeTop)
+
+    
   let lien_style = {
     position: "absolute",
-    top: "140px",
-    left: "170px",
+    top: changeTop + "px",
+    left: changeLeft + "px",
     width: "3rem",
     height: "auto",
     zIndex: "998",
