@@ -62,11 +62,16 @@ function playGame() {
       element.style[id] = styles[id];
     }
   }
+  let collectImage = ['<img src=https://i.ibb.co/2kgzPn5/poo-1.png alt=poo-1 border=0 width=100% height=auto>',
+    '<img src=https://i.ibb.co/ypsCHgq/poo-2.png alt=poo-2 border=0 width=100% height=auto>',
+    '<img src=https://i.ibb.co/NFy2NQQ/poo-3.png alt=poo-3 border=0 width=100% height=auto>',
+    '<img src=https://i.ibb.co/6y7ymSF/poo-4.png alt=poo-4 border=0 width=100% height=auto>']
+  let randomImage = getRandomCoordonate(0, collectImage.length - 1);
   let gameDiv = document.createElement('div');
   gameDiv.classList.add('gameDiv')
   gameDiv.innerHTML = `
   <div id="lien">
-      <a id="collect" href="#"><img src="https://i.ibb.co/2kgzPn5/poo-1.png" alt="poo-1" border="0" width="100%" height="auto"></a>
+      <a id="collect" href="#">${collectImage[randomImage]}</a>
   </div>
   <div id="filtre-noir"></div>
   <!-- <div class="cursor"></div> -->
@@ -100,14 +105,14 @@ function playGame() {
   }
   addStyles(collect,a_style);
 
-  const bodyFiltre = document.querySelector('body')
+ /*  const bodyFiltre = document.querySelector('body')
   bodyStyle = {
-    /* z-index: 2; */
+    z-index: 2;
     backgroundcolor: "yellow",
     display: "flex",
     position: "relative"
   }
-  addStyles(bodyFiltre,bodyStyle);
+  addStyles(bodyFiltre,bodyStyle); */
 
   let lien = document.getElementById('lien')
   lien.onclick = function(){
@@ -117,11 +122,11 @@ function playGame() {
   div.remove();
   } 
   
-  let changeTop = getRandomCoordonate(150, 250).toString();
-  let changeLeft = getRandomCoordonate(160, 250).toString();
+  let changeTop = getRandomCoordonate(150, 1000).toString();
+  let changeLeft = getRandomCoordonate(160, 1250).toString();
 
   function getRandomCoordonate(min, max) {
-    return Math.ceil((Math.random() * (max - min) + min));
+    return Math.floor((Math.random() * max) + min);
   } 
 
   console.log("left = " + changeLeft)
