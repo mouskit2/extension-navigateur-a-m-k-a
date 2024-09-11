@@ -65,15 +65,18 @@ function playGame() {
   let gameDiv = document.createElement('div');
   gameDiv.innerHTML = `
   <div id="lien">
-      <a id="collect" href="http://www.google.com" target="_blank"><img src="https://i.ibb.co/2kgzPn5/poo-1.png" alt="poo-1" border="0"></a>
+      <a id="collect" href="#" target="none"><img src="https://i.ibb.co/2kgzPn5/poo-1.png" alt="poo-1" border="0"></a>
   </div>
   <div id="filtre-noir"></div>
   <!-- <div class="cursor"></div> -->
   <script src="/Test CSS/script-test.js"></script>
   `;
   document.body.appendChild(gameDiv);
+  gameDiv.classList.add('gameDiv');// Permet de détruire la div car celle-ci est régénérée après chargement de la page
 
   let nFilter = document.getElementById('filtre-noir');
+  // nFilter.onclick = function(){
+  // nFilter.style.display = "none"}
   let styles = {
     position: "absolute",
     width: "200%",
@@ -82,7 +85,7 @@ function playGame() {
     pointerEvents: "none",
     top: "0px",
     left:"0px",
-    zindex:"995",
+    zIndex:"995",
     transform: "translateX(-50%) translateY(-50%)",
     maskPosition: "2px 23px",
     maskOrigin: "pointer",
@@ -105,14 +108,21 @@ function playGame() {
   }
   addStyles(bodyFiltre,bodyStyle);
 
-  let lien = document.getElementById('lien');
+  let lien = document.getElementById('lien')
+  lien.onclick = function(){
+  // lien.style.display = "none";
+  // nFilter.style.display = "none";
+  const div = document.querySelector('.gameDiv');
+  div.remove();
+  }
   let lien_style = {
     position: "absolute",
     top: "140px",
     left: "170px",
     width: "5rem",
     height: "auto",
-    zindex:"999"
+    zIndex:"994",
+    overflow:"hidden"
   }
   addStyles(lien,lien_style);
 

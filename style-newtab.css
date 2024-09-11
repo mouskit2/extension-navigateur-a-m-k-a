@@ -47,6 +47,7 @@ h1 {
 .motivation-meme {
     max-width: 30rem;
     height: auto;
+    border-radius: 10px;
 }
 
 .todo-app {
