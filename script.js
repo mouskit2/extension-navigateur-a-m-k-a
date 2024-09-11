@@ -65,7 +65,7 @@ function playGame() {
   let gameDiv = document.createElement('div');
   gameDiv.innerHTML = `
   <div id="lien">
-      <a id="collect" href="http://www.google.com" target="_blank">LIEN GOOGLE</a>
+      <a id="collect" href="http://www.google.com" target="_blank"><img src="https://i.ibb.co/2kgzPn5/poo-1.png" alt="poo-1" border="0"></a>
   </div>
   <div id="filtre-noir"></div>
   <!-- <div class="cursor"></div> -->
@@ -108,8 +108,10 @@ function playGame() {
   let lien = document.getElementById('lien');
   let lien_style = {
     position: "absolute",
-    top: "0px",
-    left: "0px",
+    top: "140px",
+    left: "170px",
+    width: "5rem",
+    height: "auto",
     zindex:"999"
   }
   addStyles(lien,lien_style);
