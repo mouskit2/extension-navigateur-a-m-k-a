@@ -126,7 +126,7 @@ function playGame() {
   let changeLeft = getRandomCoordonate(160, 1250).toString();
 
   function getRandomCoordonate(min, max) {
-    return Math.floor((Math.random() * max) + min);
+    return Math.floor((Math.random() * (max + min)) + min);
   } 
 
   console.log("left = " + changeLeft)
