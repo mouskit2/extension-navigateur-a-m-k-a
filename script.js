@@ -122,11 +122,11 @@ function playGame() {
   div.remove();
   } 
   
-  let changeTop = getRandomCoordonate(150, 1000).toString();
-  let changeLeft = getRandomCoordonate(160, 1250).toString();
+  let changeTop = getRandomCoordonate(10, 90).toString();
+  let changeLeft = getRandomCoordonate(10, 90).toString();
 
   function getRandomCoordonate(min, max) {
-    return Math.floor((Math.random() * (max + min)) + min);
+    return Math.floor((Math.random() * (max - min)) + min);
   } 
 
   console.log("left = " + changeLeft)
@@ -135,8 +135,8 @@ function playGame() {
     
   let lien_style = {
     position: "absolute",
-    top: changeTop + "px",
-    left: changeLeft + "px",
+    top: changeTop + "%",
+    left: changeLeft + "%",
     width: "3rem",
     height: "auto",
     zIndex: "998",
